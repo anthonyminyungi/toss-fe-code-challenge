@@ -1,0 +1,293 @@
+/* 모달 스타일링 */
+
+/* 모달 오버레이 - 백드롭 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* 모달 컨테이너 - 실제 모달 콘텐츠 */
+.modal-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* 모달 레이어 */
+.modal-layer {
+  position: relative;
+}
+
+/* 모달 스택 아이템 */
+.modal-stack-item {
+  position: relative;
+}
+
+/* FormModal 콘텐츠 */
+.form-modal-content {
+  padding: 24px;
+}
+
+/* 모달 헤더 */
+.modal-header {
+  margin-bottom: 24px;
+}
+
+.modal-title {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.25;
+}
+
+.modal-description {
+  margin: 0;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 폼 그룹 */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #374151;
+  font-size: 14px;
+}
+
+/* 폼 입력 필드 */
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* 에러 상태 */
+.form-input.error,
+.form-textarea.error {
+  border-color: #ef4444;
+}
+
+.form-input.error:focus,
+.form-textarea.error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* 에러 메시지 */
+.error-message {
+  margin-top: 4px;
+  color: #ef4444;
+  font-size: 14px;
+}
+
+/* 필드 도움말 */
+.field-help {
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* 폼 액션 버튼들 */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.btn-cancel,
+.btn-submit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.btn-cancel {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+.btn-submit {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.btn-submit:active:not(:disabled),
+.btn-cancel:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn-submit:disabled,
+.btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 메인 페이지 스타일링 */
+.modal-form-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.modal-form-page header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.modal-form-page h1 {
+  margin: 0 0 12px 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.modal-form-page header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.demo-section,
+.requirements-section {
+  margin-bottom: 40px;
+}
+
+.demo-section h2,
+.requirements-section h2 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.open-modal-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.open-modal-btn:hover {
+  background: #2563eb;
+}
+
+.open-modal-btn:active {
+  transform: translateY(1px);
+}
+
+.modal-status {
+  margin-top: 16px;
+  padding: 12px;
+  background: #dbeafe;
+  border: 1px solid #3b82f6;
+  border-radius: 6px;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.requirements-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.requirements-section li {
+  padding: 8px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 반응형 */
+@media (max-width: 640px) {
+  .modal-overlay {
+    padding: 8px;
+  }
+
+  .modal-container {
+    max-height: 90vh;
+  }
+
+  .form-modal-content {
+    padding: 20px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .btn-cancel,
+  .btn-submit {
+    width: 100%;
+  }
+}

@@ -7,6 +7,10 @@
     "noEmit": true,
     "skipLibCheck": true,
     "strict": true,
-    "verbatimModuleSyntax": true
-  }
+    "verbatimModuleSyntax": true,
+    "lib": ["ES2015", "DOM", "DOM.Iterable"],
+    "target": "ES2015",
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
+  },
+  "include": ["src/**/*", "src/**/*.test.ts", "src/**/*.test.tsx"]
 }
